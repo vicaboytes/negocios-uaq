@@ -1,0 +1,43 @@
+{
+    "Proyecto Principal": {
+        "fecha_inicio": "2026-08-12",
+        "tareas": [
+            {
+                "ID": 1,
+                "Tarea": "Configuraci\u00f3n AUTOSAR Adaptive",
+                "Dias": 10,
+                "Depende_De": "",
+                "Equipo": "SWPF_INT_COM",
+                "Progreso (%)": 40
+            },
+            {
+                "ID": 2,
+                "Tarea": "Integraci\u00f3n de SO QNX",
+                "Dias": 15,
+                "Depende_De": "1",
+                "Equipo": "SWPF_ENV_PERF",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 3,
+                "Tarea": "Revisi\u00f3n de Arquitectura IPC",
+                "Dias": 8,
+                "Depende_De": "1",
+                "Equipo": "SWPF_INT_COM",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 4,
+                "Tarea": "Pruebas de Rendimiento CI/CD",
+                "Dias": 12,
+                "Depende_De": "2, 3",
+                "Equipo": "SWPF_ENV_PERF",
+                "Progreso (%)": 0
+            }
+        ]
+    },
+    "Proyecto 2": {
+        "fecha_inicio": "2026-10-03",
+        "tareas": []
+    }
+}
