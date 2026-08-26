@@ -6,6 +6,7 @@ certifi==2026.7.22
 charset-normalizer==3.5.1
 click==8.4.2
 colorama==0.4.6
+graphviz==0.21
 h11==0.16.0
 httptools==0.8.0
 idna==3.19
@@ -38,4 +39,3 @@ urllib3==2.7.0
 uvicorn==0.52.4
 watchdog==6.0.0
 websockets==16.1.1
-graphviz
