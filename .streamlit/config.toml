@@ -1,0 +1,15 @@
+[theme]
+# Forzar el tema oscuro
+base="dark"
+
+# Colores primarios para hacer match con nuestro Material Design
+primaryColor="#AB47BC"
+
+# Color de fondo principal (Match con nuestro CSS)
+backgroundColor="#121212"
+
+# Color de fondo secundario (Barra lateral e inputs)
+secondaryBackgroundColor="#1E1E1E"
+
+# Color del texto principal
+textColor="#FFFFFF"

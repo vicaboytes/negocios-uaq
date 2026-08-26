@@ -1,43 +1,124 @@
 {
     "Proyecto Principal": {
-        "fecha_inicio": "2026-08-12",
+        "fecha_inicio": "2026-08-29",
         "tareas": [
             {
                 "ID": 1,
-                "Tarea": "Configuraci\u00f3n AUTOSAR Adaptive",
-                "Dias": 10,
+                "Tarea": "Setup Inicial Canal de Comunicacion",
+                "Descripcion": "Crear la cuenta de Google/YouTube y configuraciones de seguridad base.",
+                "Fecha_Inicio": "2026-08-29",
+                "Fecha_Fin": "2026-09-30",
                 "Depende_De": "",
-                "Equipo": "SWPF_INT_COM",
-                "Progreso (%)": 40
+                "Progreso (%)": 0
             },
             {
                 "ID": 2,
-                "Tarea": "Integraci\u00f3n de SO QNX",
-                "Dias": 15,
-                "Depende_De": "1",
-                "Equipo": "SWPF_ENV_PERF",
+                "Tarea": "Mapa de Empatía",
+                "Descripcion": "Definir perfil de profesionales/empresas. Documentar en texto plano 3 dolores principales y necesidades.",
+                "Fecha_Inicio": "2026-08-29",
+                "Fecha_Fin": "2026-09-01",
+                "Depende_De": "",
                 "Progreso (%)": 0
             },
             {
                 "ID": 3,
-                "Tarea": "Revisi\u00f3n de Arquitectura IPC",
-                "Dias": 8,
-                "Depende_De": "1",
-                "Equipo": "SWPF_INT_COM",
+                "Tarea": "Canvas Propuesta de Valor",
+                "Descripcion": "Mapear servicios contra dolores. Definir creadores de alegrías y aliviadores de frustraciones.",
+                "Fecha_Inicio": "2026-09-02",
+                "Fecha_Fin": "2026-09-06",
+                "Depende_De": "2",
                 "Progreso (%)": 0
             },
             {
                 "ID": 4,
-                "Tarea": "Pruebas de Rendimiento CI/CD",
-                "Dias": 12,
+                "Tarea": "Branding de YouTube",
+                "Descripcion": "Diseño de identidad, banners y plantilla de miniaturas basadas en la propuesta de valor definida.",
+                "Fecha_Inicio": "2026-09-07",
+                "Fecha_Fin": "2026-09-27",
+                "Depende_De": "3",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 5,
+                "Tarea": "Setup OKF (Evolutivo)",
+                "Descripcion": "Crear estructura base OKF con datos del Canvas. Este archivo será vivo y mantenido por las specs de Google/Claude.",
+                "Fecha_Inicio": "2026-09-07",
+                "Fecha_Fin": "2026-09-11",
                 "Depende_De": "2, 3",
-                "Equipo": "SWPF_ENV_PERF",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 6,
+                "Tarea": "Setup Claude Code (Harness)",
+                "Descripcion": "Configurar Claude Code en terminal. Establecer permisos e instrucciones para que lea, modifique y actualice el OKF del negocio.",
+                "Fecha_Inicio": "2026-09-12",
+                "Fecha_Fin": "2026-09-18",
+                "Depende_De": "5",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 7,
+                "Tarea": "Selección de Solución Central",
+                "Descripcion": "Elegir 1 problema (máximo 3 si son complementarios) para enfocar todo el contenido inicial.",
+                "Fecha_Inicio": "2026-09-12",
+                "Fecha_Fin": "2026-09-15",
+                "Depende_De": "5",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 8,
+                "Tarea": "Modelo de Monetización (Continuo)",
+                "Descripcion": "Definir temarios y precios de entrenamientos. Tarea en paralelo hasta que haya interés real de usuarios.",
+                "Fecha_Inicio": "2026-09-07",
+                "Fecha_Fin": "2026-10-15",
+                "Depende_De": "3",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 9,
+                "Tarea": "Creación Lead Magnet (Mini-Guía)",
+                "Descripcion": "Desarrollar el recurso gratuito (ej. Plantilla, Prompts o Cheat Sheet) sobre la Solución Central para regalar a cambio del email.",
+                "Fecha_Inicio": "2026-09-16",
+                "Fecha_Fin": "2026-09-22",
+                "Depende_De": "7",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 10,
+                "Tarea": "Landing Page en Streamlit",
+                "Descripcion": "Prototipo web para capturar emails. Incluye formulario y lógica para entregar el Lead Magnet automáticamente.",
+                "Fecha_Inicio": "2026-09-23",
+                "Fecha_Fin": "2026-10-06",
+                "Depende_De": "9",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 11,
+                "Tarea": "Guiones (6 Videos) vía Claude Code",
+                "Descripcion": "Usar Claude Code iterando sobre el OKF para redactar 6 guiones profundizando en la Solución Central.",
+                "Fecha_Inicio": "2026-09-19",
+                "Fecha_Fin": "2026-09-28",
+                "Depende_De": "6, 7",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 12,
+                "Tarea": "Grabación y Edición Multiformato",
+                "Descripcion": "Grabar videos. Edición enfocada en legibilidad de pantallas (resoluciones 4K, 1080p, 720p).",
+                "Fecha_Inicio": "2026-09-29",
+                "Fecha_Fin": "2026-10-15",
+                "Depende_De": "11",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 13,
+                "Tarea": "Publicación, Analíticas y Captura",
+                "Descripcion": "Subir videos optimizados. Monitorear derivación de tráfico a Streamlit y medir captura de prospectos.",
+                "Fecha_Inicio": "2026-10-16",
+                "Fecha_Fin": "2026-11-20",
+                "Depende_De": "1, 4, 10, 12",
                 "Progreso (%)": 0
             }
         ]
-    },
-    "Proyecto 2": {
-        "fecha_inicio": "2026-10-03",
-        "tareas": []
     }
 }
