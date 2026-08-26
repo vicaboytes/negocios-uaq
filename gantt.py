@@ -264,7 +264,7 @@ else:
 st.divider()
 
 # --- 8. DETALLES DE TAREAS (VISOR SMART) ---
-st.markdown(f'<h3 class="title-flex"><span class="mat-icon icon-primary" style="font-size: 32px;">task_alt</span> Detalles Estratégicos (Metodología SMART)</h3>', unsafe_allow_html=True)
+st.markdown(f'<h3 class="title-flex"><span class="mat-icon icon-primary" style="font-size: 32px;">task_alt</span> Detalles de Tareas</h3>', unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
 if not df.empty:
