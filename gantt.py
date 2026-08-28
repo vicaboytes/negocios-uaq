@@ -11,7 +11,6 @@ st.set_page_config(page_title="Gantt Studio", page_icon="📊", layout="wide")
 # --- 1. CONFIGURACIÓN CSS Y MATERIAL DESIGN ICONS ---
 dark_material_css = f"""
 <style>
-    /* Importar fuente Roboto y Google Material Symbols (Rounded & Filled) */
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0');
     
@@ -21,7 +20,6 @@ dark_material_css = f"""
     }}
     .stApp {{ background-color: #121212; }}
     
-    /* Clase base para los íconos Material */
     .mat-icon {{
         font-family: 'Material Symbols Rounded';
         font-weight: normal;
@@ -50,17 +48,16 @@ dark_material_css = f"""
     h1, h2, h3, p {{ color: #E0E0E0 !important; }}
     [data-testid="stTabs"] button {{ font-size: 18px !important; padding-bottom: 10px !important; }}
     
-    /* Colores de identidad visual */
-    .icon-primary {{ color: #AB47BC; }} /* Púrpura Material */
-    .icon-critical {{ color: #EF5350; }} /* Rojo Material */
-    .icon-normal {{ color: #42A5F5; }} /* Azul Material */
+    .icon-primary {{ color: #AB47BC; }} 
+    .icon-critical {{ color: #EF5350; }} 
+    .icon-normal {{ color: #42A5F5; }} 
 </style>
 """
 st.markdown(dark_material_css, unsafe_allow_html=True)
 
 ARCHIVO_DATOS = "datos_gantt_cpm.json"
 
-# --- 2. GESTIÓN DE DATOS (SOLO LECTURA) ---
+# --- 2. GESTIÓN DE DATOS ---
 def cargar_datos():
     if os.path.exists(ARCHIVO_DATOS):
         with open(ARCHIVO_DATOS, "r", encoding="utf-8") as f:
@@ -72,7 +69,7 @@ datos_app = cargar_datos()
 # --- 3. BARRA LATERAL ---
 st.sidebar.markdown(f'<div class="sidebar-title"><span class="mat-icon icon-primary" style="font-size: 28px;">folder_copy</span> <span>Proyectos</span></div>', unsafe_allow_html=True)
 lista_proyectos = list(datos_app.keys())
-proyecto_seleccionado = st.sidebar.selectbox("Seleccionar Espacio", lista_proyectos, label_visibility="collapsed")
+proyecto_seleccionado = st.sidebar.selectbox("Seleccionar Espacio", lista_proyectos, label_visibility="collapsed", key="selector_proyectos")
 
 st.sidebar.markdown("""
     <br><hr><br>
@@ -149,16 +146,28 @@ else:
     fecha_mostrar = datetime.date.today()
 
 # --- TÍTULO PRINCIPAL ---
-st.markdown(f'<h1 class="title-flex"><span class="mat-icon icon-primary" style="font-size: 45px;">monitoring</span> {proyecto_seleccionado}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 class="title-flex"><span class="mat-icon icon-primary" style="font-size: 40px;">rocket_launch</span> Consultoría Tecnológica & IA: Automatización y SaaS</h1>', unsafe_allow_html=True)
 
-# --- 6. BARRA DE ACCIÓN GLOBAL ---
+# --- 6. OBJETIVO SMART PRINCIPAL ---
+st.markdown("""
+<div style="background-color: #1E1E1E; padding: 20px 24px; border-radius: 12px; border: 1px solid #333333; border-left: 6px solid #AB47BC; margin-bottom: 24px; box-shadow: 0px 4px 6px rgba(0,0,0,0.3);">
+    <h3 style="margin-top: 0; color: #FFFFFF; display: flex; align-items: center; gap: 8px; font-size: 1.3rem;">
+        <span class="mat-icon icon-primary">flag</span> Objetivo Principal
+    </h3>
+    <p style="color: #E0E0E0; font-size: 1.1rem; line-height: 1.6; margin-bottom: 0;">
+        <strong>Estructurar, lanzar y validar una consultoría B2B</strong> apoyada en Inteligencia Artificial y provisión de herramientas SaaS. El objetivo es captar los primeros <strong>25 prospectos calificados</strong> orgánicos mediante contenido en video, desarrollar la arquitectura técnica de los servicios (cursos/SaaS), y cerrar la primera venta comercial a más tardar el <strong>10 de Abril de 2027</strong>.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+# --- 7. BARRA DE ACCIÓN GLOBAL ---
 st.markdown(f"""
 <div class="action-bar">
     <p class="action-text"><strong>Inicio:</strong> {fecha_mostrar.strftime('%d/%m/%Y')} &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Duración Total:</strong> {duracion_proyecto} días</p>
 </div>
 """, unsafe_allow_html=True)
 
-# --- 7. RENDERIZADO DEL GANTT Y MAPA DE DEPENDENCIAS ---
+# --- 8. RENDERIZADO DEL GANTT Y MAPA DE DEPENDENCIAS ---
 if not df.empty:
     df_plot = df.dropna(subset=["ID", "Fecha_Inicio", "Fecha_Fin"]).copy()
 
@@ -177,7 +186,6 @@ if not df.empty:
             
         df_plot["Depende_De_Nombres"] = df_plot["Depende_De"].apply(obtener_nombres_dependencias)
         
-        # PESTAÑAS (Usando emojis formales alineados al estilo Material)
         tab_gantt, tab_red = st.tabs(["📊 Diagrama de Gantt", "🔗 Mapa de Dependencias"])
         
         with tab_gantt:
@@ -217,7 +225,6 @@ if not df.empty:
             )
             st.plotly_chart(fig, use_container_width=True)
             
-            # Leyenda con iconos Material Circle
             leyenda_html = f"""
             <div style="display: flex; justify-content: center; gap: 40px; margin-top: -10px; margin-bottom: 20px; font-size: 16px; color: #E0E0E0;">
                 <div style="display: flex; align-items: center; gap: 8px;">
@@ -263,7 +270,7 @@ else:
 
 st.divider()
 
-# --- 8. DETALLES DE TAREAS (VISOR SMART) ---
+# --- 9. DETALLES DE TAREAS (VISOR SMART) ---
 st.markdown(f'<h3 class="title-flex"><span class="mat-icon icon-primary" style="font-size: 32px;">task_alt</span> Detalles de Tareas</h3>', unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -272,7 +279,6 @@ if not df.empty:
         f_inicio = row["Fecha_Inicio"].strftime("%d %b") if pd.notnull(row["Fecha_Inicio"]) else "Sin fecha"
         f_fin = row["Fecha_Fin"].strftime("%d %b %Y") if pd.notnull(row["Fecha_Fin"]) else "Sin fecha"
         
-        # Emojis formales alineados a los colores de Material Design de la app
         indicador = "🔴" if row["Estado_Visual"] == "Ruta Crítica" else "🔵"
         titulo_expander = f"{indicador} {row['Tarea']} &nbsp; | &nbsp; ⏳ {f_inicio} - {f_fin} ({row['Dias']} días)"
         

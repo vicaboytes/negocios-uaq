@@ -1,122 +1,113 @@
 {
-    "Proyecto Principal": {
+    "Consultoría IA & SaaS": {
         "fecha_inicio": "2026-08-29",
         "tareas": [
             {
                 "ID": 1,
-                "Tarea": "Setup Inicial Canal de Comunicacion",
-                "Descripcion": "Crear la cuenta de Google/YouTube y configuraciones de seguridad base.",
+                "Tarea": "Mapa de Empatía",
+                "Descripcion": "Definir dolores, beneficios y tareas del cliente B2B. Documentar a detalle el perfil del usuario.",
                 "Fecha_Inicio": "2026-08-29",
-                "Fecha_Fin": "2026-09-30",
+                "Fecha_Fin": "2026-09-18",
                 "Depende_De": "",
                 "Progreso (%)": 0
             },
             {
                 "ID": 2,
-                "Tarea": "Mapa de Empatía",
-                "Descripcion": "Definir perfil de profesionales/empresas. Documentar en texto plano 3 dolores principales y necesidades.",
+                "Tarea": "Investigación Fiscal y Régimen (SAT)",
+                "Descripcion": "Analizar RESICO vs Actividad Empresarial. Evaluar obligaciones fiscales para ingresos nacionales y extranjeros (exportación de servicios a tasa 0% de IVA).",
                 "Fecha_Inicio": "2026-08-29",
-                "Fecha_Fin": "2026-09-01",
+                "Fecha_Fin": "2026-09-18",
                 "Depende_De": "",
                 "Progreso (%)": 0
             },
             {
                 "ID": 3,
                 "Tarea": "Canvas Propuesta de Valor",
-                "Descripcion": "Mapear servicios contra dolores. Definir creadores de alegrías y aliviadores de frustraciones.",
-                "Fecha_Inicio": "2026-09-02",
-                "Fecha_Fin": "2026-09-06",
-                "Depende_De": "2",
+                "Descripcion": "Mapear la IA y el SaaS como aliviadores directos para el problema detectado en el Mapa de Empatía. Elegir 1 a 3 problemas centrales.",
+                "Fecha_Inicio": "2026-09-19",
+                "Fecha_Fin": "2026-10-09",
+                "Depende_De": "1",
                 "Progreso (%)": 0
             },
             {
                 "ID": 4,
-                "Tarea": "Branding de Canal de Comunicación",
-                "Descripcion": "Diseño de identidad, banners y plantilla de miniaturas basadas en la propuesta de valor definida.",
-                "Fecha_Inicio": "2026-09-07",
-                "Fecha_Fin": "2026-09-27",
-                "Depende_De": "3",
+                "Tarea": "Estructura Operativa (OKF)",
+                "Descripcion": "Documentar la información vital del negocio y el problema principal del usuario. Archivo base para escalar el modelo operativo.",
+                "Fecha_Inicio": "2026-09-19",
+                "Fecha_Fin": "2026-10-09",
+                "Depende_De": "1, 3",
                 "Progreso (%)": 0
             },
             {
                 "ID": 5,
-                "Tarea": "Setup OKF (Evolutivo)",
-                "Descripcion": "Crear estructura base OKF con datos del Canvas. Este archivo será vivo y mantenido por las specs de Google/Claude.",
-                "Fecha_Inicio": "2026-09-07",
-                "Fecha_Fin": "2026-09-11",
-                "Depende_De": "2, 3",
+                "Tarea": "Identidad de Marca y Canal",
+                "Descripcion": "Branding, inicio del canal de YouTube, entendimiento de la plataforma, diseño de banners y miniaturas.",
+                "Fecha_Inicio": "2026-10-10",
+                "Fecha_Fin": "2026-11-06",
+                "Depende_De": "1, 3",
                 "Progreso (%)": 0
             },
             {
                 "ID": 6,
-                "Tarea": "Setup Claude Code (Harness)",
-                "Descripcion": "Configurar Claude Code en terminal. Establecer permisos e instrucciones para que lea, modifique y actualice el OKF del negocio.",
-                "Fecha_Inicio": "2026-09-12",
-                "Fecha_Fin": "2026-09-18",
-                "Depende_De": "5",
-                "Progreso (%)": 0
-            },
-            {
-                "ID": 7,
-                "Tarea": "Selección de Solución Central",
-                "Descripcion": "Elegir 1 problema (máximo 3 si son complementarios) para enfocar todo el contenido inicial.",
-                "Fecha_Inicio": "2026-09-12",
-                "Fecha_Fin": "2026-09-15",
-                "Depende_De": "5",
-                "Progreso (%)": 0
-            },
-            {
-                "ID": 8,
-                "Tarea": "Modelo de Monetización (Continuo)",
-                "Descripcion": "Definir temarios y precios de entrenamientos. Tarea en paralelo hasta que haya interés real de usuarios.",
-                "Fecha_Inicio": "2026-09-07",
-                "Fecha_Fin": "2026-10-15",
+                "Tarea": "Registro de Marca (IMPI) y Propiedad Intelectual",
+                "Descripcion": "Búsqueda fonética de disponibilidad de marca ante el IMPI y protección legal de los entregables de software y entrenamientos.",
+                "Fecha_Inicio": "2026-10-10",
+                "Fecha_Fin": "2026-11-06",
                 "Depende_De": "3",
                 "Progreso (%)": 0
             },
             {
+                "ID": 7,
+                "Tarea": "Configuración de Pasarelas de Pago Globales",
+                "Descripcion": "Estructurar métodos de pago (Stripe, PayPal para tarjetas internacionales, transferencias SPEI y alineación con facturación del SAT).",
+                "Fecha_Inicio": "2026-09-19",
+                "Fecha_Fin": "2026-10-16",
+                "Depende_De": "2",
+                "Progreso (%)": 0
+            },
+            {
+                "ID": 8,
+                "Tarea": "Infraestructura Tecnológica (IA + Stack de Desarrollo)",
+                "Descripcion": "Setup de terminal con IA local/nube para gestión del OKF, y despliegue del stack tecnológico para desarrollar entrenamientos y el producto SaaS.",
+                "Fecha_Inicio": "2026-10-10",
+                "Fecha_Fin": "2026-11-13",
+                "Depende_De": "4",
+                "Progreso (%)": 0
+            },
+            {
                 "ID": 9,
-                "Tarea": "Creación Lead Magnet (Mini-Guía)",
-                "Descripcion": "Desarrollar el recurso gratuito (ej. Plantilla, Prompts o Cheat Sheet) sobre la Solución Central para regalar a cambio del email.",
-                "Fecha_Inicio": "2026-09-16",
-                "Fecha_Fin": "2026-09-22",
-                "Depende_De": "7",
+                "Tarea": "Embudo de Captación de Clientes",
+                "Descripcion": "Redactar recurso gratuito (Mini-guía) y desarrollar la Landing Page para la captura automatizada de correos.",
+                "Fecha_Inicio": "2026-11-07",
+                "Fecha_Fin": "2026-12-04",
+                "Depende_De": "4, 5, 7",
                 "Progreso (%)": 0
             },
             {
                 "ID": 10,
-                "Tarea": "Landing Page en Streamlit",
-                "Descripcion": "Prototipo web para capturar emails. Incluye formulario y lógica para entregar el Lead Magnet automáticamente.",
-                "Fecha_Inicio": "2026-09-23",
-                "Fecha_Fin": "2026-10-06",
+                "Tarea": "Producción de Contenido (6 Videos)",
+                "Descripcion": "Redacción de guiones enfocados en el problema principal, grabación en 4K/1080p y edición. Subir con estrategia de derivación al embudo.",
+                "Fecha_Inicio": "2026-12-05",
+                "Fecha_Fin": "2026-12-31",
                 "Depende_De": "9",
                 "Progreso (%)": 0
             },
             {
                 "ID": 11,
-                "Tarea": "Guiones (6 Videos) vía Claude Code",
-                "Descripcion": "Usar Claude Code iterando sobre el OKF para redactar 6 guiones profundizando en la Solución Central.",
-                "Fecha_Inicio": "2026-09-19",
-                "Fecha_Fin": "2026-09-28",
-                "Depende_De": "6, 7",
+                "Tarea": "Desarrollo de Servicios (Entrenamiento o SaaS)",
+                "Descripcion": "Definir temarios, desarrollar MVP del SaaS, grabar capacitaciones y montar plataforma de consumo aprovechando la infraestructura tecnológica lista.",
+                "Fecha_Inicio": "2026-11-14",
+                "Fecha_Fin": "2027-02-15",
+                "Depende_De": "8",
                 "Progreso (%)": 0
             },
             {
                 "ID": 12,
-                "Tarea": "Grabación y Edición Multiformato",
-                "Descripcion": "Grabar videos. Edición enfocada en legibilidad de pantallas (resoluciones 4K, 1080p, 720p).",
-                "Fecha_Inicio": "2026-09-29",
-                "Fecha_Fin": "2026-10-15",
-                "Depende_De": "11",
-                "Progreso (%)": 0
-            },
-            {
-                "ID": 13,
-                "Tarea": "Publicación, Analíticas y Captura",
-                "Descripcion": "Subir videos optimizados. Monitorear derivación de tráfico a Streamlit y medir captura de prospectos.",
-                "Fecha_Inicio": "2026-10-16",
-                "Fecha_Fin": "2026-11-20",
-                "Depende_De": "1, 4, 10, 12",
+                "Tarea": "Comercialización B2B y Evaluación MVP",
+                "Descripcion": "Campaña de ventas a lista de emails capturados, procesamiento de pagos internacionales/nacionales, cierre de clientes y evaluación del servicio.",
+                "Fecha_Inicio": "2027-02-16",
+                "Fecha_Fin": "2027-04-10",
+                "Depende_De": "10, 11",
                 "Progreso (%)": 0
             }
         ]
